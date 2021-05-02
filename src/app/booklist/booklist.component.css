@@ -1,0 +1,9 @@
+.col-sm {
+    border: 1px solid black;  
+    min-height: 300px; 
+}
+
+#BookInfo {
+    border: 1px solid black;
+    min-height: 150px;
+}
