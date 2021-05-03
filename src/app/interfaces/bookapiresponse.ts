@@ -1,8 +1,15 @@
 
 export interface BookAPIResponse {
-    Title:string;
-    Author:string;
-    genre:string;
-    Description:string;
+    items: items;
+}
+
+export interface items {
+    volumeInfo: volumeInfo;
+}
+
+export interface volumeInfo {
+    title:string;
+    authors:string;
+    link:string;
     Error:string;
 }

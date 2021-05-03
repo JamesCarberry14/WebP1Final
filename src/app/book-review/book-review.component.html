@@ -1,13 +1,19 @@
-
-<H2>Book Reviews:</H2>
-
-<p id="ShowReviews"></p>
-
-
-<h2>Add Review:</h2>
+<div>
+    <h2>Add Review:</h2>
 
     <div>
-    <input type="text"  id="ReviewSection" placeholder="Enter your review here:">
+        <input type="text" name="name" #name placeholder="Enter name of book:">
+    <input type="text"  id="ReviewSection" name="reviewText" #reviewText placeholder="Enter your review here:">
     </div>  
-    <button class="btn btn-outline-success" type="submit">Submit Review</button>
-    
+    <br>
+    <button class="btn btn-outline-success" type="submit" (click)="addTheBook(name.value,reviewText.value)">Submit Review</button>
+
+    <br>
+</div>
+
+<H2>Posted Reviews:</H2>
+<h5>Find reviews of a book here:</h5>
+
+<div class='container'>
+    <app-show-reviews *ngFor="let bookData of booksData" [bookData]="bookData"></app-show-reviews>
+</div>

@@ -1,9 +1,12 @@
 .col-sm {
     border: 1px solid black;  
-    min-height: 300px; 
+    min-height: 650px; 
+    max-height: 650px;
 }
 
 #BookInfo {
     border: 1px solid black;
-    min-height: 150px;
+    min-height: 500px;
+    max-height: 500px;
 }
+

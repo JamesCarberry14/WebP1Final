@@ -11,15 +11,15 @@ import { BookAPIResponse} from '../interfaces/bookapiresponse';
 
 export class BookApiService {
 
-  private _siteURL='https://www.googleapis.com/books/v1';
-  private _key="AIzaSyAEpXxeKN6_5ZGAXDFjyymdeh7vQd2Y-d0";
+  private _siteURL='https://www.googleapis.com/books/v1/volumes?q=+intitle:';
+  private _key="&key=AIzaSyAEpXxeKN6_5ZGAXDFjyymdeh7vQd2Y-d0";
 
 
   constructor(private _http:HttpClient) { }
 
 
   getBookData(bookName): Observable<BookAPIResponse> {
-    return this._http.get<BookAPIResponse>(this._siteURL + this._key + bookName)
+    return this._http.get<BookAPIResponse>(this._siteURL + bookName  + this._key )
     .pipe(
       tap(data => console.log('BookData/error' + JSON.stringify(data))
       ),
