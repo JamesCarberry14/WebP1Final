@@ -1,0 +1,11 @@
+#ReviewSection {
+    border: 1px solid black;
+    min-width:100%;
+    min-height: 300px;
+}
+
+#ShowReviews {
+    border: 1px solid black;
+    min-width:100%;
+    min-height: 400px;
+}
